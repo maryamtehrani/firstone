@@ -1,0 +1,318 @@
+@font-face {
+font-family: 'MyFontName';
+  src:url('Sahel.ttf')  format('truetype');/* Safari, Android, iOS */
+         font-weight: 300;
+         font-style: normal;
+         font-size: 12px;
+  
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family:"MyFontName";
+    font-weight: 300;
+    font-style: normal;
+    font-size: 12px;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+ 
+.page {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0; 
+    font-family: "MyFontName";
+    direction: rtl;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .formbox {
+    display: flex;
+    width: 700px;
+    height: 70%;
+    z-index: 16;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 7px 7px 7px 7px  rgba(0, 0, 0, 0.4);
+    /* margin-top: -50px; */
+    margin-top: 50px;
+  }
+  .form-left{
+    background-image: url(./b17.jpg);
+    background-position: bottom;
+    border-radius: 0 15px 15px 0;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .form-right{
+      width: 70%;
+      border-radius: 15px 0 0 15px;
+  }
+  .img1  { 
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    box-shadow:5px 10px 5px 0 rgba(0, 0, 0, 0.4);
+  }
+  .tab{
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      border-radius: 15px 0 0 0;   
+  }
+  .tab-inner {
+    width: 50%;
+    height: 100%;
+    border-radius: 15px 0 0 0;   
+
+}
+.tablinks {
+  background-color: transparent;
+	border: none;
+	outline: none;
+	font-size: 18px;
+	font-weight: 400;
+	color: rgb(87, 87, 87);
+	/* padding-bottom: 22px; */
+	border-bottom: 3px solid;
+  border-bottom-color: gainsboro;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 15px 0 0 0;   
+
+}
+.tablinks.active {
+  font-weight: 700;
+  background-color:rgba(56, 16, 141, 0.055);
+	color:#37108D ;
+  border-bottom-color: #37108D;
+  border-radius: 15px 0 0 0;   
+
+}
+.icon{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    width: 10%;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 150px;
+
+}
+
+.tabcontent{
+    padding: 8px;
+
+}
+.form-row .form-holder fieldset {
+	border:  2px solid gainsboro;
+	border-radius: 6px;
+  padding: 0 25px;
+  background-color: #e5e5e517;
+  margin-bottom: 2px;
+}
+input{
+  background-color:#e5e5e517 ;
+}
+.form-row .form-holder legend {
+	font-size: 13px;
+	font-weight: 600;
+	color: rgba(87, 87, 87, 0.808);
+}
+.form-row .form-holder input {
+    width: 100%;
+    padding: 4px 0px 12px;
+    border: none;
+    appearance: unset;
+    outline: none;
+    font-weight: 600;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+.form-row .form-holder input {
+    color: #333;
+}
+.form-row .form-holder input#find_bank {
+	border:  2px solid #e5e5e5;
+	padding: 11px 20px;
+}
+.form-holder input.radio {
+    display: none;
+}
+#first-last{
+    display: flex;
+    justify-content: space-between;
+}
+#form-holder-fl{
+    width: 48%;
+}
+/* .special-label{
+	color: rgb(133, 133, 133);
+    border-top: 2px dashed #e5e5e5; 
+    margin-top: 5px;
+}
+.form-row .form-holder1 select {
+	font-size: 14px;
+    color: #666;
+    font-weight: 600;
+    background: #fff url('form-v1-icon.png') no-repeat scroll;
+    background-position: right 6px center;
+    cursor: pointer;
+    border:  2px solid #e5e5e5;
+    padding: 10.4px 13px;
+}
+.form-row .form-holder1 .input-border {
+	border:  2px solid #e5e5e5;
+	padding: 11px 20px;
+    margin-top: 8px;
+}
+.form-row.form-row-date .form-holder1 select {
+    float: left;
+    width: 20.6%;
+    margin-right: 15px;
+}
+.form-row.form-row-date .form-holder1 select#year {
+    width: 27.28%;
+}
+.form-row .form-holder1 input::-webkit-input-placeholder { 
+    color: #666;
+    font-size: 14px;
+  }
+.form-row .form-holder1 input::-moz-placeholder { 
+    color: #666;
+    font-size: 14px;
+  }
+.form-row .form-holder1 input:-ms-input-placeholder { 
+    font-size: 14px;
+  }
+.form-row .form-holder1 input:-moz-placeholder { 
+    color: #666;
+    font-size: 14px;
+  }
+.date{
+    display: flex;
+    flex-direction: row;
+} */
+#btnl {
+    border: none;
+    width: 160px;
+    height: 45px;
+    margin: auto;
+    border-radius: 5px;
+    margin-top: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: #37108D ;
+    font-size: 14px;
+    color: #fff;
+    vertical-align: middle;
+    font-weight: 700;
+ }
+    button i {
+      margin-left: 10px;
+}
+#btnl:hover  {
+    background-color: purple; }
+
+a{
+  text-decoration: none;
+  font-size: 12px;
+}
+p{
+  font-size: 38px;
+  color: #37108D;
+  text-align: center;
+  text-shadow: 2px 4px silver;
+  /* margin-top: -115px; */
+  font-weight: 1000;
+}

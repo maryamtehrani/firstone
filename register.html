@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>form</title>
+</head>
+<body>
+    <div class="page"> 
+        <!-- background -->
+        <div class="waveWrapper waveAnimation">
+            <div class="waveWrapperInner bgTop">
+              <div class="wave waveTop" style="background-image: url('./Bg-Pics/wave-top.png')"></div><p></p>
+            </div>
+            <div class="waveWrapperInner bgMiddle">
+              <div class="wave waveMiddle" style="background-image: url('./Bg-Pics/wave-mid.png')"></div>
+            </div>
+            <div class="waveWrapperInner bgBottom">
+              <div class="wave waveBottom" style="background-image: url('./Bg-Pics/wave-bot.png')"></div>
+            </div>
+        </div>
+          
+          <!-- code khodm -->
+        <div class="formbox">
+            <div class="form-left">
+                <img  class="img1" src="./Soleta.png" alt="logo">
+                <div class="left-p">
+                    <p>SOLETA</p>
+                </div>
+                <div class="icon">
+                    <img src="./1.png" alt="">
+                    <img src="./4.png" alt="">
+                    <img src="./3.png" alt="">
+                    <img src="./5.png" alt="">
+                </div>
+            </div>
+            <div class="form-right">
+                <div class="tab">
+					<div class="tab-inner">
+						<button class="tablinks" onclick="openCity(event, 'sign-up')" id="defaultOpen">ثبت نام</button>
+					</div>
+					<div class="tab-inner">
+						<button class="tablinks" onclick="openCity(event, 'sign-in')">ورود</button>
+					</div>
+                </div>
+                <!-- num2 -->
+                <form class="form-detail" action="#" method="post" id="login">
+					<div class="tabcontent" id="sign-in">
+                <div class="form-row" >
+                    <div class="form-holder ">
+                        <fieldset>
+                            <legend>نام کاربری</legend>
+                            <input type="text" class="form-control" id="Username" name="Username"  >
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-holder">
+                        <fieldset>
+                            <legend>رمز عبور</legend>
+                            <input type="password" class="form-control" id="password" name="password"  required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-holder1 form-holder-2">
+                        <input type="checkbox"> رمز عبور را به خاطر بسپار.
+                        <span class="checkmark"></span>
+                    </div>
+                </div>               
+                <div class="last-row">
+                    <button name="register" id="btnl" class="register">ورود
+                        <i class="zmdi zmdi-arrow-right"></i>
+                        </button>
+                    </div> </div>
+                </form>
+                <!-- num1 -->
+                <form class="form-detail" action="#" method="post" id="register">
+					<div class="tabcontent" id="sign-up">
+                <div class="form-row" id="first-last">
+                    <div class="form-holder" id="form-holder-fl">
+                        <fieldset>
+                            <legend>نام</legend>
+                            <input type="text" class="form-control" id="first-name" name="first-name"  required>
+                        </fieldset>
+                    </div>
+                    <div class="form-holder " id="form-holder-fl">
+                        <fieldset>
+                            <legend>نام خانوادگی</legend>
+                            <input type="text" class="form-control" id="last-name" name="last-name"  required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                        <fieldset>
+                            <legend>ایمیل</legend>
+                            <input type="text" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}"  required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                        <fieldset>
+                            <legend>رمز عبور</legend>
+                            <input type="password" name="your_password" id="your_password" class="form-control"  required>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-holder form-holder-2">
+                        <fieldset>
+                            <legend>تکرار رمز عبور</legend>
+                            <input type="password" name="your_cnpassword" id="your_cnpassword" class="form-control"  required>
+                        </fieldset>
+                    </div>
+                </div>
+                <!-- <div class="form-row form-row-optional">
+                    <div class="form-holder form-holder-2">
+                        <p class="special-label">Optional Info</p>
+                    </div>
+                </div>        
+                        <div class="form-row form-row-date">
+                            <div class="form-holder1 form-holder-2">
+                                 <div><label class="special-label2">Birth Date:</label></div>
+                                <div> <select name="date" id="date">
+                                    <option value="DD" disabled selected>DD</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select> </div>
+                                <div> <select name="month" id="month">
+                                    <option value="MM" disabled selected>MM</option>
+                                    <option value="Jan">jan</option>
+                                    <option value="Feb">Feb</option>
+                                    <option value="Mar">Mar</option>
+                                    <option value="Apr">Apr</option>
+                                    <option value="May">May</option>
+                                    <option value="Jun">Jun</option>
+                                    <option value="Jul">Jul</option>
+                                    <option value="Ags">Ags</option>
+                                    <option value="Sep">Sep</option>
+                                    <option value="Oct">Oct</option>
+                                    <option value="Nov">Nov</option>
+                                    <option value="Dec">Dec</option>
+                                </select> </div>
+                                <div> <select name="year" id="year">
+                                    <option value="YYYY" disabled selected>YYYY</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                </select> </div>
+                            </div> 
+                        </div> -->
+                        <div class="form-row">
+                            <div class="form-holder form-holder-2">
+                                <fieldset>
+                                    <legend>محل سکونت</legend>
+                                    <input type="text"  name="country" id="country" list="country1" placeholder="search" class="form-control"  required >
+                                    <datalist id="country1">
+                                        <option value="آبادان"></option>
+                                        <option value="اصفهان"></option>
+                                        <option value="بوشهر"></option>
+                                        <option value="تبریز"></option>
+                                        <option value="تهران"></option>
+                                        <option value="سیستان و بلوچستان"></option>
+                                        <option value="شیراز"></option>
+                                        <option value="قم"></option>
+                                        <option value="قشم"></option>
+                                        <option value="کرج"></option>
+                                        <option value="کردستان"></option>
+                                        <option value="کیش"></option>
+                                        <option value="رشت"></option>
+                                        <option value="بجنورد"></option>
+                                        <option value="نوشهر"></option>
+                                        <option value="مشهد"></option>
+                                        <option value="مازندران"></option>
+                                        <option value="یزد"></option>
+                                    </datalist>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-holder1 form-holder-2">
+                                <input type="checkbox"> <a href="#">قوانین</a> را میپذیرم.
+                                <span class="checkmark"></span>
+                            </div>
+                        </div>        
+                        <div class="last-row">
+                            <button name="register" id="btnl" class="register">ثبت نام
+                            <i class="zmdi zmdi-arrow-right"></i>
+                            </button>
+                        </div>   
+                </form>        
+            </div>
+        </form>
+        
+    </div>
+    <script type="text/javascript">
+		function openCity(evt, cityName) {
+		    var i, tabcontent, tablinks;
+		    tabcontent = document.getElementsByClassName("tabcontent");
+		    for (i = 0; i < tabcontent.length; i++) {
+		        tabcontent[i].style.display = "none";
+		    }
+		    tablinks = document.getElementsByClassName("tablinks");
+		    for (i = 0; i < tablinks.length; i++) {
+		        tablinks[i].className = tablinks[i].className.replace(" active", "");
+		    }
+		    document.getElementById(cityName).style.display = "block";
+		    evt.currentTarget.className += " active";
+		}
+
+		// Get the element with id="defaultOpen" and click on it
+		document.getElementById("defaultOpen").click();
+
+    alert("وبسایت آموزشی Soleta در حال تکمیل است. از صبوریتان سپاسگزاریم. ")
+    
+    </script>
+    
+  
+    
+</body>
+</html>
