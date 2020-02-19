@@ -312,7 +312,9 @@ p{
   font-size: 38px;
   color: #37108D;
   text-align: center;
+  font-style: normal;
   text-shadow: 2px 4px silver;
   /* margin-top: -115px; */
   font-weight: 1000;
+
 }
